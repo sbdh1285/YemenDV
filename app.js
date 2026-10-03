@@ -53,6 +53,11 @@ function applyConfig() {
     const href = /^https?:\/\//.test(profile) ? profile : `https://www.behance.net/${encodeURIComponent(profile)}`;
     links.push({ label: "Behance", value: profile, href, symbol: "↗" });
   }
+  if (config.github) {
+    const profile = String(config.github).replace(/^@/, "");
+    const href = /^https?:\/\//.test(profile) ? profile : `https://github.com/${encodeURIComponent(profile)}`;
+    links.push({ label: "حساب GitHub", value: profile, href, symbol: "↗" });
+  }
 
   contactLinks.replaceChildren(...links.map((item) => {
     const link = document.createElement("a");

@@ -6,4 +6,5 @@ window.PORTFOLIO_CONFIG = {
   whatsapp: "",
   instagram: "",
   behance: "",
+  github: "sbdh1285",
 };
